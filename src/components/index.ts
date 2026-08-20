@@ -1,0 +1,16 @@
+export { About } from './About';
+export { Approach } from './Approach';
+export { BrandLogo } from './BrandLogo';
+export { Contact } from './Contact';
+export { Faq } from './Faq';
+export { Footer } from './Footer';
+export { Gallery } from './Gallery';
+export { Header } from './Header';
+export { Hero } from './Hero';
+export { Marquee } from './Marquee';
+export { QuoteSection } from './QuoteSection';
+export { Roadmap } from './Roadmap';
+export { SocialLinks } from './SocialLinks';
+export { Stats } from './Stats';
+export { Ventures } from './Ventures';
+export { WaterLoader } from './WaterLoader';
