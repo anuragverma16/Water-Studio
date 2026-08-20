@@ -7,6 +7,19 @@ export const STUDIO_WHATSAPP = 'https://wa.me/918972799710';
 export const STUDIO_ADDRESS =
   'PO-Joteram, Village Nandur, Block Burdwan-II, City Burdwan, District Purba Bardhaman, West Bengal – 713104.';
 
+export const STUDIO_ADDRESS_LINES = [
+  'PO-Joteram, Village Nandur',
+  'Block Burdwan-II, City Burdwan',
+  'District Purba Bardhaman',
+  'West Bengal – 713104',
+];
+
+export const STUDIO_MAPS =
+  'https://www.google.com/maps/search/?api=1&query=' +
+  encodeURIComponent('PO-Joteram, Village Nandur, Block Burdwan-II, Burdwan, Purba Bardhaman, West Bengal 713104');
+
+export const STUDIO_HOURS = ['Monday – Saturday', '9:00 AM – 7:00 PM', 'Sunday closed'];
+
 export const navItems: { label: string; id: SectionId }[] = [
   { label: 'Home', id: 'home' },
   { label: 'About', id: 'about' },

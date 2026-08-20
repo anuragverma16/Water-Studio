@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react';
 import { ArrowRight, Check, Clock, Mail, MapPin, Phone } from 'lucide-react';
-import { STUDIO_ADDRESS, STUDIO_EMAIL, STUDIO_PHONE, STUDIO_PHONE_HREF, STUDIO_WHATSAPP } from '../data/site';
+import { STUDIO_ADDRESS_LINES, STUDIO_EMAIL, STUDIO_HOURS, STUDIO_MAPS, STUDIO_PHONE, STUDIO_PHONE_HREF, STUDIO_WHATSAPP } from '../data/site';
 import { SocialLinks } from './SocialLinks';
 
 export function Contact() {
@@ -35,13 +35,23 @@ export function Contact() {
             <span className="contact-icon"><Mail size={18} /></span>
             <span><em>Email us</em><strong>{STUDIO_EMAIL}</strong></span>
           </a>
-          <div className="panel-row">
+          <a className="panel-row" href={STUDIO_MAPS} target="_blank" rel="noreferrer">
             <span className="contact-icon"><MapPin size={18} /></span>
-            <span><em>Address</em><strong>{STUDIO_ADDRESS}</strong></span>
-          </div>
+            <span>
+              <em>Address</em>
+              <strong className="address-lines">
+                {STUDIO_ADDRESS_LINES.map((line) => <span key={line}>{line}</span>)}
+              </strong>
+            </span>
+          </a>
           <div className="panel-row">
             <span className="contact-icon"><Clock size={18} /></span>
-            <span><em>Hours</em><strong>Mon–Sat, 9:00 AM – 7:00 PM</strong></span>
+            <span>
+              <em>Hours</em>
+              <strong className="address-lines">
+                {STUDIO_HOURS.map((line) => <span key={line}>{line}</span>)}
+              </strong>
+            </span>
           </div>
           <a className="whatsapp-cta" href={STUDIO_WHATSAPP} target="_blank" rel="noreferrer">
             Chat on WhatsApp <ArrowRight size={18} />
@@ -64,7 +74,7 @@ export function Contact() {
               </div>
               <div className="form-grid">
                 <label>Full name<input name="name" required placeholder="Your full name" autoComplete="name" /></label>
-                <label>Phone<input name="phone" required type="tel" placeholder="+91 " autoComplete="tel" /></label>
+                <label>Phone<input name="phone" required type="tel" inputMode="tel" placeholder="+91 " autoComplete="tel" /></label>
                 <label>Email address<input name="email" required type="email" placeholder="you@company.com" autoComplete="email" /></label>
                 <label>Company / organisation<input name="company" placeholder="Optional" autoComplete="organization" /></label>
                 <label className="span-2">I'm interested in
