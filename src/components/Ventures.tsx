@@ -40,7 +40,7 @@ export function Ventures({ scrollTo }: VenturesProps) {
       <p className="section-lede reveal-on-scroll">Practical nourishment and creative memory — our businesses live in different moments, but they share the same attention to quality.</p>
       <div className="ventures-list">
         <VentureCard number="01" type="Daily essential" title="Paban Water" description="Clean, quality-certified packaged drinking water for the people, places, and routines that keep life moving." icon={<Droplets />} tags={['Purity', 'Availability', 'Trust']} color="blue" image="/images/water-pour.jpg" features={['Quality-certified purity', 'Reliable supply chain', 'For homes, offices & events']} />
-        <VentureCard number="02" type="Creative studio" title="Paban Frames" description="Professional photography for people, brands, and milestone moments that deserve to be remembered beautifully." icon={<Aperture />} tags={['Perspective', 'Craft', 'Feeling']} color="pink" image="/images/portrait.jpg" features={['Portrait & brand photography', 'Milestone coverage', 'Edited, print-ready delivery']} />
+        <VentureCard number="02" type="Creative studio" title="Paban Frames" description="Professional photography for people, brands, and milestone moments that deserve to be remembered beautifully." icon={<Aperture />} tags={['Perspective', 'Craft', 'Feeling']} color="pink" image="/images/water-bottles.jpg" features={['Portrait & brand photography', 'Milestone coverage', 'Edited, print-ready delivery']} />
       </div>
       <div className="ventures-cta reveal-on-scroll">
         <p>Want to partner, stock, or book a session?</p>

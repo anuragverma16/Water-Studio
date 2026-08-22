@@ -1,21 +1,10 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
-import { galleryShots, type GalleryTag } from '../data/gallery';
-
-const filters: { id: 'all' | GalleryTag; label: string }[] = [
-  { id: 'all', label: 'All' },
-  { id: 'water', label: 'Paban Water' },
-  { id: 'frames', label: 'Paban Frames' },
-];
+import { galleryShots } from '../data/gallery';
 
 export function Gallery() {
-  const [filter, setFilter] = useState<'all' | GalleryTag>('all');
   const [open, setOpen] = useState<number | null>(null);
-
-  const shots = useMemo(
-    () => (filter === 'all' ? galleryShots : galleryShots.filter((shot) => shot.tag === filter)),
-    [filter]
-  );
+  const shots = galleryShots;
 
   const close = () => setOpen(null);
   const show = (index: number) => setOpen(index);
@@ -45,27 +34,15 @@ export function Gallery() {
       <div className="section-kicker reveal-on-scroll">04 / Studio in motion</div>
       <div className="gallery-head">
         <div>
-          <h2 className="section-title reveal-on-scroll">Water and frames,<br /><span>in the real world.</span></h2>
-          <p className="section-lede reveal-on-scroll">Nine frames from both sides of Paban Studio — dependable drinking water, photography that holds onto the moment, and the community around it.</p>
-        </div>
-        <div className="gallery-filters reveal-on-scroll" role="tablist" aria-label="Gallery filters">
-          {filters.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              className={filter === item.id ? 'gallery-filter is-active' : 'gallery-filter'}
-              onClick={() => { setFilter(item.id); setOpen(null); }}
-            >
-              {item.label}
-            </button>
-          ))}
+          <h2 className="section-title reveal-on-scroll">Water,<br /><span>in the real world.</span></h2>
+          <p className="section-lede reveal-on-scroll">A look at Paban Water — from the plant to the bottle, made for homes, offices, and everyday thirst.</p>
         </div>
       </div>
       <div className="gallery-grid">
         {shots.map((shot, i) => (
           <figure
             className={`gallery-item size-${shot.size}`}
-            key={`${filter}-${shot.src}`}
+            key={shot.src}
             style={{ animationDelay: `${i * 0.06}s` }}
           >
             <button type="button" onClick={() => show(i)} aria-label={`View ${shot.caption}`}>

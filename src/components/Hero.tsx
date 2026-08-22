@@ -25,12 +25,11 @@ export function Hero({ scrollTo }: HeroProps) {
       </div>
       <div className="hero-visual reveal-on-scroll">
         <figure className="hero-photo photo-water">
-          <img src="/images/water.jpg" alt="Pure packaged drinking water from Paban Water" />
-          <figcaption>01 / Paban Water</figcaption>
+          <img src="/bottle.jpeg" alt="Pure packaged drinking water from Paban Water" />
+          
         </figure>
         <figure className="hero-photo photo-frames">
-          <img src="/images/photographer.jpg" alt="Professional photography by Paban Frames" />
-          <figcaption>02 / Paban Frames</figcaption>
+          <img src="/img2.jpeg" alt="Pouring packaged drinking water from Paban Water" />
         </figure>
         <div className="floating-note"><Sparkles size={16} /><span>Two ideas.<br /><strong>One vision.</strong></span></div>
       </div>
